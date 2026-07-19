@@ -4,20 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rosangela Coelho Rodrigues</title>
+    
+    <!-- Importação da fonte Cormorant Garamond do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+
     <style>
-        body { margin: 0; font-family: 'Georgia', serif; color: #b87b7b; line-height: 1.6; }
+        body { 
+            margin: 0; 
+            font-family: 'Cormorant Garamond', 'Georgia', serif; 
+            color: #b87b7b; 
+            line-height: 1.6; 
+        }
         
         /* Menu */
         header { 
             display: flex; justify-content: space-between; align-items: center; 
             padding: 20px 5%; background-color: #e3ede6; 
         }
-        .btn-rsvp { background: #e9967a; color: white; padding: 8px 20px; text-decoration: none; border-radius: 4px; }
+        header a, header strong {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: #b87b7b;
+        }
+        .btn-rsvp { 
+            background: #e9967a; 
+            color: white !important; 
+            padding: 8px 20px; 
+            text-decoration: none; 
+            border-radius: 4px; 
+            font-weight: 600;
+        }
 
         /* Container do Banner */
         .banner-container {
             width: 100%;
-            position: relative; /* Necessário para posicionar o texto sobre a imagem */
+            position: relative; 
             display: flex;
             justify-content: center;
             align-items: center;
@@ -25,7 +49,7 @@
 
         .banner-img {
             width: 100%;
-            height: auto; /* Mantém a proporção real da sua imagem */
+            height: auto; 
             display: block;
         }
 
@@ -35,22 +59,46 @@
             text-align: center;
             color: #b87b7b;
             padding: 20px;
+            top: 45%; /* Controla a altura. Quanto menor a porcentagem (ex: 30%, 25%), mais alto o texto fica */
+            transform: translateY(-50%);
         }
         
-        .banner-texto h1 { font-size: 3.5vw; margin: 0; }
-        .banner-texto p { font-size: 1.5vw; margin-top: 10px; }
+        .banner-texto h1 { 
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4.5vw; 
+            font-weight: 400; /* Peso leve para parecer desenhado e idêntico à imagem */
+            margin: 0; 
+            line-height: 1.1;
+        }
+        .banner-texto p { 
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8vw; 
+            margin-top: 0px; 
+            margin-bottom: 0;
+        }
         
         /* Ajustes para Celular */
         @media (max-width: 600px) {
             header { flex-direction: column; gap: 15px; }
-            .banner-texto h1 { font-size: 6vw; }
-            .banner-texto p { font-size: 3vw; }
+            .banner-texto h1 { font-size: 8vw; }
+            .banner-texto p { font-size: 4vw; }
         }
 
         /* Seções */
         .secao { padding: 80px 5%; text-align: center; }
         .bg-rosa { background-color: #fcece9; }
         .grid-duplo { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; }
+        
+        .secao h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+        .secao p {
+            font-size: 1.2rem;
+        }
     </style>
 </head>
 <body>
@@ -65,9 +113,9 @@
     <section class="banner-container">
         <img src="banner.png" alt="Banner Rosangela" class="banner-img">
         <div class="banner-texto">
-            <h1>Rosangela Coelho Rodrigues</h1>
-            <p>17.06.2023</p>
-            <p>Meus 60 anos!</p>
+            <p>05/09/2026</p>
+            <h1>Meus 60 anos!</h1>
+            <p style="font-style: italic; margin-top: 15px;">Rosangela Coelho Rodrigues!</p>
         </div>
     </section>
 
