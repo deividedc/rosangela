@@ -17,185 +17,193 @@
             color: hsla(7.5, 78.87323944%, 72.15686275%, 1); 
             line-height: 1.6; 
         }
-        
-        /* Menu */
-        header { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            padding: 20px 5%; 
-            background-color: #e3ede6; 
-            position: relative;
-            z-index: 10;
-        }
-        header a, header strong {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.2rem;
-            text-decoration: none;
-            color: hsla(7.5, 78.87323944%, 72.15686275%, 1);
-        }
-        .btn-rsvp { 
-            background: #e9967a; 
-            color: white !important; 
-            padding: 8px 20px; 
-            text-decoration: none; 
-            border-radius: 4px; 
-            font-weight: 600;
-        }
 
-        /* Container do Banner */
+        /* Container do Banner ajustado */
         .banner-container {
             width: 100%;
+            height: 100vh; /* Faz o banner ocupar 100% da altura da tela */
             position: relative; 
             display: flex;
             justify-content: center;
             align-items: center;
             background-color: #e3ede6;
+            overflow: hidden; /* Evita vazamentos de imagem */
         }
 
+        /* Imagem preenchendo totalmente o espaço sem distorcer */
         .banner-img {
             width: 100%;
-            height: auto; 
+            height: 100%; 
+            object-fit: cover; /* Garante o ajuste perfeito cobrindo a tela */
+            object-position: center; /* Centraliza o foco da imagem */
             display: block;
         }
 
-        /* Texto sobre o Banner (Desktop) */
+        /* Texto rigorosamente centralizado no meio do banner */
         .banner-texto {
             position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             text-align: center;
             color: hsla(7.5, 78.87323944%, 72.15686275%, 1);
             padding: 20px;
-            top: 35%; 
-            transform: translateY(-50%);
+            width: 95%; 
+            max-width: 1000px;
+            box-sizing: border-box;
         }
         
         .banner-texto h1 { 
             font-family: 'Cormorant Garamond', serif;
-            font-size: 4.5vw; 
+            font-size: 4vw; 
             font-weight: 400; 
-            margin: 0; 
+            margin: 10px 0; 
             line-height: 1.1;
+            white-space: nowrap; 
         }
         .banner-texto p { 
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.8vw; 
-            margin-top: 0px; 
-            margin-bottom: 0;
+            margin: 0;
+        }
+        
+        .nome-assinatura {
+            font-style: italic; 
+            margin-top: 15px !important;
+            white-space: nowrap; 
         }
 
         /* Seção de Texto/Convite pós-banner */
         .secao-convite {
-            padding: 80px 5%;
+            padding: 120px 5%;
             display: flex;
-            flex-direction: column; /* Organização vertical das 3 divs internas */
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
             background-color: #ffffff;
         }
         
-        /* Limita o tamanho máximo do bloco de texto para ficar elegante no Desktop */
         .container-texto-vertical {
-            max-width: 800px;
+            max-width: 1200px; 
             width: 100%;
             display: flex;
             flex-direction: column;
-            gap: 25px; /* Espaço vertical controlado entre os 3 blocos */
+            gap: 50px; 
         }
 
+        /* Fonte MUITO ampliada para Desktop */
         .container-texto-vertical h2 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
+            font-size: 4.5rem;
             font-weight: 400;
             margin: 0;
-            line-height: 1.4;
+            line-height: 1.3;
             color: hsla(7.5, 78.87323944%, 72.15686275%, 1);
         }
         
-        /* Seções */
-        .secao { padding: 80px 5%; text-align: center; }
-        .bg-rosa { background-color: #fcece9; }
-        .grid-duplo { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; }
-        
-        .secao h3 {
+        /* Seção de Data e Local baseada na Imagem */
+        .secao { 
+            padding: 120px 5%; 
+            text-align: center; 
+        }
+        .bg-rosa { 
+            background-color: #fcece9; 
+        }
+        .grid-duplo { 
+            display: flex; 
+            justify-content: space-around; 
+            flex-wrap: wrap; 
+            gap: 60px; 
+        }
+
+        /* Rótulos pequenos superiores APENAS EM PRETO */
+        .rotulo-superior {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.8rem;
-            font-weight: 600;
-            letter-spacing: 2px;
-            margin-bottom: 5px;
+            font-size: 1.2rem;
+            font-weight: 400;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            color: #000000;
+        }
+
+        /* Informações Principais Grandes */
+        .texto-principal-grande {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4.5rem;
+            font-weight: 400;
+            margin: 0;
+            line-height: 1.2;
             color: hsla(7.5, 78.87323944%, 72.15686275%, 1);
         }
-        .secao p {
-            font-size: 1.2rem;
+
+        /* Texto secundário (Recepção) */
+        .secao .grid-duplo h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            font-weight: 400;
+            margin: 15px 0 0 0;
             color: hsla(7.5, 78.87323944%, 72.15686275%, 1);
         }
 
         /* Ajustes para Celular (Responsividade) */
         @media (max-width: 600px) {
-            header { 
-                flex-direction: column; 
-                gap: 12px; 
-                padding: 15px 5%;
-                text-align: center;
-            }
-            
             .banner-container {
-                flex-direction: column-reverse; 
-                padding-top: 30px;
+                height: 60vh; /* Reduz um pouco a altura em celulares para melhorar a proporção */
+            }
+
+            .banner-texto h1 { font-size: 6.5vw; }
+            .banner-texto p { font-size: 4vw; }
+            .banner-texto .nome-assinatura { font-size: 3.5vw; }
+
+            .secao-convite {
+                padding: 60px 20px;
             }
             
-            .banner-texto {
-                position: relative;
-                top: 0;
-                transform: none;
-                padding: 10px 20px 30px 20px;
-                width: 100%;
-                box-sizing: border-box;
+            .container-texto-vertical {
+                gap: 30px;
+            }
+            
+            .container-texto-vertical h2,
+            .texto-principal-grande {
+                font-size: 2.2rem;
+                line-height: 1.3;
             }
 
-            .banner-texto h1 { font-size: 9vw; }
-            .banner-texto p { font-size: 5vw; }
-
-            /* Ajustes finos do convite vertical no celular */
-            .secao-convite {
-                padding: 50px 20px;
-            }
-            .container-texto-vertical h2 {
-                font-size: 1.6rem;
-                line-height: 1.5;
+            .secao .grid-duplo h3 {
+                font-size: 1.5rem;
             }
 
-            /* Força a Data e o Local a ficarem um embaixo do outro no celular */
+            .rotulo-superior {
+                font-size: 1rem;
+                margin-bottom: 10px;
+            }
+
             .grid-duplo {
                 flex-direction: column;
-                gap: 40px; 
+                gap: 60px; 
             }
             
             .secao {
-                padding: 50px 5%; 
+                padding: 60px 5%; 
             }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <a href="#local">Onde e quando</a>
-        <strong>Rosangela Coelho Rodrigues</strong>
-        <a href="#rsvp" class="btn-rsvp">RSVP</a>
-    </header>
-
-    <!-- Banner com Imagem e Texto tratado para mobile -->
+    <!-- Banner Ajustável com Imagem Fluida e Texto Centralizado -->
     <section class="banner-container">
         <img src="banner.png" alt="Banner Rosangela" class="banner-img">
         <div class="banner-texto">
             <p>- 05/09/2026 -</p>
             <h1>Meus 60 anos!</h1>
-            <p style="font-style: italic; margin-top: 15px;">Rosangela Coelho Rodrigues</p>
+            <p class="nome-assinatura">Rosangela Coelho Rodrigues</p>
         </div>
     </section>
 
-    <!-- Seção do Convite com 3 Divs Verticais perfeitamente centralizadas -->
+    <!-- Seção do Convite com Fontes Ampliadas -->
     <section class="secao-convite">
         <div class="container-texto-vertical">
             <div>
@@ -214,12 +222,13 @@
     <section class="secao bg-rosa" id="local">
         <div class="grid-duplo">
             <div>
-                <h3>DATA</h3>
-                <p>Sábado, 17 de junho de 2023</p>
+                <div class="rotulo-superior">Quando</div>
+                <h2 class="texto-principal-grande">Sábado, 17 de junho de 2023</h2>
+                <h3>Recepção: 18h</h3>
             </div>
             <div>
-                <h3>LOCAL</h3>
-                <p>The Atelie Hotel</p>
+                <div class="rotulo-superior">Onde</div>
+                <h2 class="texto-principal-grande">The Atelie Hotel</h2>
             </div>
         </div>
     </section>
