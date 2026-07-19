@@ -143,6 +143,20 @@
             color: #990011; 
         }
 
+        /* Estilo para tornar o mapa responsivo */
+        .mapa-container {
+            margin-top: 25px;
+            width: 100%;
+            max-width: 500px;
+            display: inline-block;
+        }
+        .mapa-container iframe {
+            width: 100%;
+            height: 300px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
         /* Configurações Responsivas */
         @media (max-width: 600px) {
             .banner-texto h1 { font-size: 7.8vw; margin: 2px 0; } 
@@ -151,11 +165,20 @@
             .secao-convite { padding: 60px 20px; }
             .container-texto-vertical { gap: 30px; }
             .container-texto-vertical h2 { font-size: 1.3rem; line-height: 1.4; }
-            .texto-principal-grande { font-size: 1.75rem; line-height: 1.3; }
+            
+            /* Diminuído para se igualar à div do meio (1.3rem) */
+            .texto-principal-grande { font-size: 1.3rem; line-height: 1.4; }
+            
             .secao .grid-duplo h3 { font-size: 1.2rem; }
-            .rotulo-superior { font-size: 0.8rem; margin-bottom: 10px; }
+            
+            /* Aumentado de 0.8rem para se igualar à fonte de recepção (1.2rem) */
+            .rotulo-superior { font-size: 1.2rem; margin-bottom: 10px; }
+            
             .grid-duplo { flex-direction: column; gap: 60px; }
             .secao { padding: 60px 5%; }
+
+            .mapa-container { margin-top: 15px; }
+            .mapa-container iframe { height: 220px; }
         }
     </style>
 </head>
@@ -193,7 +216,10 @@
             </div>
             <div>
                 <div class="rotulo-superior">Onde</div>
-                <h2 class="texto-principal-grande">The Atelie Hotel</h2>
+                <h2 class="texto-principal-grande">Salão ...</h2>
+                <div class="mapa-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1749.6469852574503!2d-43.435534282715345!3d-21.68825583976872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x989e507059bae1%3A0x69086fa26216ff5!2sPais%20e%20Filhos!5e0!3m2!1spt-BR!2sbr!4v1784443393602!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
             </div>
         </div>
     </section>
