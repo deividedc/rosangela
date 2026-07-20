@@ -191,7 +191,15 @@
             .banner-texto .nome-assinatura { font-size: 4.2vw; margin-top: 2px !important; } 
             .secao-convite { padding: 60px 20px; }
             .container-texto-vertical { gap: 30px; }
-            .container-texto-vertical h2 { font-size: 1.5rem; line-height: 1.4; }
+            
+            /* Ajuste unificado: ambos ficaram com 1.3rem */
+            .container-texto-vertical h2, 
+            .formulario-container h1, 
+            .formulario-container h2 { 
+                font-size: 1.3rem !important; 
+                line-height: 1.4 !important; 
+            }
+            
             .texto-principal-grande { font-size: 1.3rem; line-height: 1.4; }
             .secao .grid-duplo h3 { font-size: 1.2rem; }
             .rotulo-superior { font-size: 1.2rem; margin-bottom: 10px; }
@@ -199,8 +207,6 @@
             .secao { padding: 60px 5%; }
             .mapa-container { margin-top: 15px; }
             .mapa-container iframe { height: 220px; }
-            .formulario-container h1 { font-size: 1.5rem; line-height: 1.4; }
-            .formulario-container h2 { font-size: 1.3rem; line-height: 1.4; }
         }
     </style>
 </head>
@@ -241,20 +247,17 @@
         </div>
     </section>
     <section class="secao-formulario">
-         <div class="formulario-container">
-            <h1 font-style: italic; margin-bottom: 30px;">Espero você comigo neste dia especial.</h1>
-            <h2 font-style: italic; margin-bottom: 30px;">Sua presença tornará este momento ainda mais significativo. Por favor, confirme se poderá comparecer através do formulário abaixo até o dia 24/08/2026.</h2>
-           
+        <div class="formulario-container">
+            <!-- Corrigido: adicionado style correto -->
+            <h1 style="font-size: 2.7rem; margin-bottom: 30px;">Espero você comigo neste dia especial.</h1>
+            <h2 style="font-size: 2.7rem; margin-bottom: 30px;">Sua presença tornará este momento ainda mais significativo. Por favor, confirme se poderá comparecer através do formulário abaixo até o dia 24/08/2026.</h2>
         </div>
         <div class="formulario-container" style="overflow: hidden; height: 1000px; position: relative;">
-            
-            <!-- O iframe é posicionado negativamente para "subir" e esconder o cabeçalho -->
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeOfqwvfnql46zI1KDIyJBNvdLlJcmMOgNWWMlw1rb8yjHjZg/viewform?usp=dialog" 
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeOfqwvfnql46zI1KDIyJBNvdLlJcmMOgNWWMlw1rb8yjHjZg/viewform?embedded=true" 
                     style="position: absolute; top: 0px; left: 0; width: 100%; height: 1500px; border: none;">
-                    
             </iframe>
         </div>
     </section>
-
+    
 </body>
 </html>
